@@ -1,16 +1,14 @@
+/* elements */
 body {
     background-color: #f0f2ef;
 }
 
-#center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+button:hover {
+    transition: transform 0.3s ease;
+    transform: rotate(30deg);
 }
 
+/* Classes */
 .button {
     width: 100px;
     height: 100px;
@@ -31,7 +29,26 @@ body {
     border-radius: 50%;
 }
 
-button:hover {
-    transition: transform 0.3s ease;
-    transform: rotate(30deg);
+/* IDs */
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
+
+#growingInput {
+    margin-right: 10px;
+    margin-left: -50px;
+    width: 150%;
+    min-height: 40px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #a7a4a3;
+    border-radius: 4px;
+    resize: none;
+    overflow: hidden;
+    align-content: center;
+  }
