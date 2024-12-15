@@ -20,3 +20,32 @@ textarea.addEventListener('input', function() {
     this.style.width = '100%';
   }
 });
+
+//10 paragraph options
+let textOne = "The sun rose over the misty mountains, painting the sky in hues of pink and gold. Birds began their morning chorus, filling the air with melodious chirps. A gentle breeze rustled through the trees, carrying the scent of pine and wildflowers. In the distance, a stream bubbled cheerfully, adding its voice to nature's symphony."
+let textTwo = "Sarah opened the dusty old book, its pages yellowed with age. As she began to read, she was transported to a world of magic and adventure. The characters came to life in her imagination, their stories unfolding before her eyes. Hours passed unnoticed as she delved deeper into the enchanting tale."
+let textThree = "The bustling city never seemed to sleep, its streets always alive with activity. Neon signs flickered in the night, casting a colorful glow on the sidewalks. Taxis honked their horns as they navigated through the sea of vehicles. Late-night revelers spilled out of clubs, their laughter echoing off the tall buildings."
+let textFour = "The aroma of freshly baked bread wafted through the small bakery. Inside, the baker kneaded dough with practiced hands, his movements swift and sure. Rows of pastries lined the display case, each one a work of art. Customers chatted as they waited in line, eager to taste the day's creations."
+let textFive = "The old clock tower stood tall in the town square, its face weathered by time. Its chimes rang out every hour, a familiar sound to the local residents. Pigeons perched on its ledges, cooing softly in the afternoon sun. Below, people hurried about their day, the clock a silent witness to their lives."
+let textSix = "The laboratory hummed with the sound of equipment and quiet conversation. Scientists in white coats moved from station to station, absorbed in their work. Beakers bubbled with colorful liquids, and computers displayed complex data. In this room, groundbreaking discoveries were waiting to be made."
+let textSeven = "The art gallery was a haven of tranquility in the midst of the busy city. Paintings of all styles and sizes adorned the walls, each telling its own story. Visitors moved quietly from one piece to another, lost in contemplation. The soft lighting highlighted the beauty of each brushstroke, bringing the artworks to life."
+let textEight = "The garden was a riot of color, with flowers of every hue imaginable. Bees buzzed from bloom to bloom, their legs heavy with pollen. A stone path wound its way through the beds, inviting visitors to explore. In one corner, a small fountain provided a soothing backdrop of trickling water."
+let textNine = "The library was a treasure trove of knowledge, its shelves lined with books on every subject. The scent of old paper and leather bindings filled the air, a comforting smell to book lovers. Students huddled over tables, poring over texts and taking notes. In the quiet corners, readers lost themselves in worlds of fiction and fact."
+let textTen = "The beach stretched out as far as the eye could see, a golden ribbon between land and sea. Waves lapped gently at the shore, leaving behind seashells and smooth pebbles. Children laughed as they built sandcastles, their buckets and spades scattered around them. Seagulls wheeled overhead, their cries carried on the salty breeze."
+
+// array of paragraph options
+const textArray = [textOne, textTwo, textThree, textFour, textFive, textSix, textSeven, textEight, textNine, textTen]
+
+let random;
+
+// get the element with classname button and store it in variable button
+const button = document.getElementsByClassName('button');
+
+// add event listener for when button pressed
+document.querySelector('.button').addEventListener('click', function() {
+  let i = Math.floor(Math.random() * textArray.length);
+  let r = textArray[i];
+  random = r;
+  document.querySelector('.random').innerHTML = random;
+});
+

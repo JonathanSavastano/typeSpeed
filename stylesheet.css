@@ -29,6 +29,13 @@ button:hover {
     border-radius: 50%;
 }
 
+/* this is just used to get element by id for random text generation */
+.random {
+    text-align: left;
+    justify-content: left;
+    max-width: 300px;
+}
+
 /* IDs */
 #center {
     display: flex;
@@ -47,7 +54,7 @@ button:hover {
     padding: 8px;
     font-size: 16px;
     border: 1px solid #a7a4a3;
-    border-radius: 4px;
+    border-radius: 25px;
     resize: none;
     overflow: hidden;
     align-content: center;
