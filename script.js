@@ -49,3 +49,40 @@ document.querySelector('.button').addEventListener('click', function() {
   document.querySelector('.random').innerHTML = random;
 });
 
+//variables for words per minute
+let startTime, endTime, wordCount;
+
+// grab the text area element by id
+const textInput = document.getElementById('growingInput');
+// grab the result element by id
+const resultDisplay = document.getElementById('result');
+
+// start timer when user focuses on the text input field
+textInput.addEventListener('focus', startTimer);
+// end the timer when the user leaves the input field
+textInput.addEventListener('blur', endTimer);
+
+// start timer
+function startTimer() {
+  startTime = new Date().getTime();
+}
+
+// end timer
+function endTimer() {
+  endTime = new Date().getTime();
+  calculateWPM();
+}
+
+// calculate words per minute
+function calculateWPM() {
+  // get text input by user, remove leading/trailing whitespace
+  const text = textInput.value.trim();
+  // count number of words by splitting text at spaces
+  wordCount = text.split(/\s+/).length;
+  // calculate time elasped in minutes
+  const timeElapsed = (endTime - startTime) / 60000;
+  // caculate wpm using formula: WPM = words / time
+  const wpm = Math.round(wordCount / timeElapsed);
+  // display the calculated WPM
+  resultDisplay.textContent = `Your typing speed: ${wpm} WPM`;
+}

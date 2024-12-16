@@ -3,11 +3,6 @@ body {
     background-color: #f0f2ef;
 }
 
-button:hover {
-    transition: transform 0.3s ease;
-    transform: rotate(30deg);
-}
-
 /* Classes */
 .button {
     width: 100px;
@@ -23,10 +18,34 @@ button:hover {
     justify-content: center;
 }
 
+.button:hover {
+    transition: transform 0.3s ease;
+    transform: rotate(30deg);
+}
+
 .button_img {
     width: 80%;
     height: 80%;
     border-radius: 50%;
+}
+
+.stop {
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    border-radius: 50%; /* Make button circular */
+    border: none; /* remove default border */
+    padding: 0; /* remove extra padding */
+    background-color: transparent; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stop:hover {
+    transition: transform 0.3s ease;
+    transform: scale(1.1)
 }
 
 /* this is just used to get element by id for random text generation */
